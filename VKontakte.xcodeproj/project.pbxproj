@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		C178B8EE23E0B7960041D0BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178B8ED23E0B7960041D0BE /* AppDelegate.swift */; };
 		C178B8F023E0B7960041D0BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178B8EF23E0B7960041D0BE /* SceneDelegate.swift */; };
-		C178B8F223E0B7960041D0BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178B8F123E0B7960041D0BE /* ViewController.swift */; };
 		C178B8F523E0B7960041D0BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C178B8F323E0B7960041D0BE /* Main.storyboard */; };
 		C178B8F723E0B7990041D0BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C178B8F623E0B7990041D0BE /* Assets.xcassets */; };
 		C178B8FA23E0B7990041D0BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C178B8F823E0B7990041D0BE /* LaunchScreen.storyboard */; };
 		C178B90523E0B79A0041D0BE /* VKontakteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178B90423E0B79A0041D0BE /* VKontakteTests.swift */; };
 		C178B91023E0B79A0041D0BE /* VKontakteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178B90F23E0B79A0041D0BE /* VKontakteUITests.swift */; };
+		C178B91E23E0B8650041D0BE /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178B91D23E0B8650041D0BE /* LoginFormController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		C178B8EA23E0B7960041D0BE /* VKontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKontakte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C178B8ED23E0B7960041D0BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C178B8EF23E0B7960041D0BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C178B8F123E0B7960041D0BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C178B8F423E0B7960041D0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C178B8F623E0B7990041D0BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C178B8F923E0B7990041D0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		C178B90B23E0B79A0041D0BE /* VKontakteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKontakteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C178B90F23E0B79A0041D0BE /* VKontakteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKontakteUITests.swift; sourceTree = "<group>"; };
 		C178B91123E0B79A0041D0BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C178B91D23E0B8650041D0BE /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			children = (
 				C178B8ED23E0B7960041D0BE /* AppDelegate.swift */,
 				C178B8EF23E0B7960041D0BE /* SceneDelegate.swift */,
-				C178B8F123E0B7960041D0BE /* ViewController.swift */,
+				C178B91D23E0B8650041D0BE /* LoginFormController.swift */,
 				C178B8F323E0B7960041D0BE /* Main.storyboard */,
 				C178B8F623E0B7990041D0BE /* Assets.xcassets */,
 				C178B8F823E0B7990041D0BE /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C178B8F223E0B7960041D0BE /* ViewController.swift in Sources */,
+				C178B91E23E0B8650041D0BE /* LoginFormController.swift in Sources */,
 				C178B8EE23E0B7960041D0BE /* AppDelegate.swift in Sources */,
 				C178B8F023E0B7960041D0BE /* SceneDelegate.swift in Sources */,
 			);
