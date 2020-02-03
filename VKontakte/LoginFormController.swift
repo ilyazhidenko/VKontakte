@@ -53,22 +53,46 @@ class LoginFormController: UIViewController {
         self.scrollView.endEditing(true)
     }
     
-    @IBAction func testButtonTapped(_ sender: UIButton){
-        print(#function)
+    func showAnauthorizedError(){
         
+        let alertVC = UIAlertController(title: "Ошибка", message: "Неверный пароль или логин", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { _ in
+            print("Ok Clicked")
+        }
+        alertVC.addAction(action)
+        present(alertVC, animated: true, completion: nil)
+        
+    }
+    
+    func checkLogin()-> Bool {
+
         if let login = loginTextField.text,
-            let password = passwordTextField.text {
-            
-            print("Login \(login) and Password \(password)")
-            
-            if login == "admin", password == "pwd123" {
-                print("Успешная авторизация")
-            }
-            
-            else {
+                let password = passwordTextField.text {
                 
-                print("Ошибка авторизации")
+                print("Login \(login) and Password \(password)")
+                
+                if login == "admin", password == "pwd123" {
+                    print("Успешная авторизация")
+                    return true
+                }
+                else {
+                    print("Ошибка авторизации")
+                    return false
+                }
             }
+        
+        return false
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if checkLogin(){
+            return true
+        }
+        else {
+        
+        showAnauthorizedError()
+        return false
+    
         }
     }
 }
