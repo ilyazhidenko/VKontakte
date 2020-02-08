@@ -221,7 +221,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="groopName" destination="6No-5H-E9i" id="1b6-Hg-TDQ"/>
-                                    <segue destination="73k-0e-kvB" kind="unwind" identifier="addGroup" unwindAction="addGroopWithSegue:" id="uHg-e0-LQe"/>
+                                    <segue destination="73k-0e-kvB" kind="unwind" identifier="addGroop" unwindAction="addGroopWithSegue:" id="P69-Pr-nKg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
