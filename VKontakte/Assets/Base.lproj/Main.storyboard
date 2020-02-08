@@ -111,18 +111,18 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="uCf-N1-Gwi" kind="relationship" relationship="viewControllers" id="RI6-kU-dfE"/>
                         <segue destination="OrM-94-23d" kind="relationship" relationship="viewControllers" id="1An-mh-uM4"/>
+                        <segue destination="uCf-N1-Gwi" kind="relationship" relationship="viewControllers" id="RI6-kU-dfE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTa-Sg-dc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="920" y="137"/>
         </scene>
-        <!--Группы-->
+        <!-- NavGroopViewController-->
         <scene sceneID="2by-ib-1Ie">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="uCf-N1-Gwi" sceneMemberID="viewController">
+                <navigationController title=" NavGroopViewController" modalPresentationStyle="fullScreen" id="uCf-N1-Gwi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Группы" id="Oya-Xr-uHF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BiJ-Du-wff">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -136,22 +136,39 @@
             </objects>
             <point key="canvasLocation" x="919" y="910"/>
         </scene>
-        <!--Item-->
+        <!--GroopTable-->
         <scene sceneID="Ghk-yF-9Dz">
             <objects>
-                <tableViewController id="sTl-V4-3aQ" sceneMemberID="viewController">
+                <tableViewController title="GroopTable" id="sTl-V4-3aQ" customClass="MyGroopsController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qid-8m-gao">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JaO-Bw-miJ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyGroopCell" id="JaO-Bw-miJ" customClass="MyGroopsCell" customModule="VKontakte" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="67.333335876464844"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JaO-Bw-miJ" id="cgh-gF-794">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67.333335876464844"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-Cm-UJG">
+                                            <rect key="frame" x="32" y="23" width="350" height="21.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nrJ-Cm-UJG" firstAttribute="top" secondItem="cgh-gF-794" secondAttribute="topMargin" constant="12" id="9Lt-4N-bGq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="nrJ-Cm-UJG" secondAttribute="trailing" constant="12" id="BIO-U5-qX6"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="nrJ-Cm-UJG" secondAttribute="bottom" constant="12" id="b8m-ek-B1V"/>
+                                        <constraint firstItem="nrJ-Cm-UJG" firstAttribute="leading" secondItem="cgh-gF-794" secondAttribute="leadingMargin" constant="12" id="yz0-ak-TRq"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mygroopName" destination="nrJ-Cm-UJG" id="qAB-E6-ioV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -159,7 +176,7 @@
                             <outlet property="delegate" destination="sTl-V4-3aQ" id="gDL-RF-sXo"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="jhX-Tl-0G8"/>
+                    <tabBarItem key="tabBarItem" title="Группы" id="jhX-Tl-0G8"/>
                     <navigationItem key="navigationItem" id="867-If-k5G">
                         <barButtonItem key="rightBarButtonItem" title="Поиск групп" id="Ajd-kG-ZQh">
                             <connections>
@@ -172,22 +189,40 @@
             </objects>
             <point key="canvasLocation" x="1826" y="910"/>
         </scene>
-        <!--Table View Controller-->
+        <!--AllGroopController-->
         <scene sceneID="DKE-hL-vqk">
             <objects>
-                <tableViewController id="3ZY-tw-eim" sceneMemberID="viewController">
+                <tableViewController title="AllGroopController" id="3ZY-tw-eim" customClass="AllGroopController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vmq-Cq-FLw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Lt4-aZ-jpH">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroopCell" id="Lt4-aZ-jpH" customClass="AllGroopCell" customModule="VKontakte" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="67.333335876464844"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lt4-aZ-jpH" id="V5c-vu-y4G">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67.333335876464844"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6No-5H-E9i">
+                                            <rect key="frame" x="32" y="23" width="350" height="21.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6No-5H-E9i" firstAttribute="leading" secondItem="V5c-vu-y4G" secondAttribute="leadingMargin" constant="12" id="SHC-3O-mtX"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="6No-5H-E9i" secondAttribute="bottom" constant="12" id="a9m-5S-4Zf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6No-5H-E9i" secondAttribute="trailing" constant="12" id="bfA-Ox-ekh"/>
+                                        <constraint firstItem="6No-5H-E9i" firstAttribute="top" secondItem="V5c-vu-y4G" secondAttribute="topMargin" constant="12" id="pbv-g5-fpp"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="groopName" destination="6No-5H-E9i" id="1b6-Hg-TDQ"/>
+                                    <segue destination="73k-0e-kvB" kind="unwind" identifier="addGroup" unwindAction="addGroopWithSegue:" id="uHg-e0-LQe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -198,13 +233,14 @@
                     <navigationItem key="navigationItem" id="fpg-GL-CHy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TSY-82-MHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="73k-0e-kvB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2725" y="910"/>
+            <point key="canvasLocation" x="2724.6376811594205" y="909.78260869565224"/>
         </scene>
-        <!--Groop View Controller-->
+        <!-- NavFriedsViewController-->
         <scene sceneID="vNX-fW-zHc">
             <objects>
-                <navigationController title="Groop View Controller" modalPresentationStyle="fullScreen" id="OrM-94-23d" sceneMemberID="viewController">
+                <navigationController title=" NavFriedsViewController" modalPresentationStyle="fullScreen" id="OrM-94-23d" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Друзья" id="SY9-i1-09N"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lui-jf-SAa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -218,10 +254,10 @@
             </objects>
             <point key="canvasLocation" x="1674" y="136"/>
         </scene>
-        <!--Item-->
+        <!--FriedsTable-->
         <scene sceneID="2Bi-zX-7Ss">
             <objects>
-                <tableViewController id="5D7-HV-b4o" sceneMemberID="viewController">
+                <tableViewController title="FriedsTable" id="5D7-HV-b4o" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="U5X-c6-Ihk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,7 +271,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="aWL-cv-tzp" kind="show" id="vJl-g9-daM"/>
+                                    <segue destination="aWL-cv-tzp" kind="show" id="NFC-35-Edw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -244,17 +280,17 @@
                             <outlet property="delegate" destination="5D7-HV-b4o" id="plk-Rm-5xC"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Uqd-mU-Z00"/>
+                    <tabBarItem key="tabBarItem" title="Друзья" id="Uqd-mU-Z00"/>
                     <navigationItem key="navigationItem" id="WCg-lG-3Xo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpf-2l-u4k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2649" y="135"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--FriendsColection-->
         <scene sceneID="8ko-xq-8YZ">
             <objects>
-                <collectionViewController id="aWL-cv-tzp" sceneMemberID="viewController">
+                <collectionViewController title="FriendsColection" id="aWL-cv-tzp" customClass="FriendsController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ETc-3l-QoJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
