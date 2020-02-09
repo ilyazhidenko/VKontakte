@@ -15,6 +15,11 @@
 		C178B90523E0B79A0041D0BE /* VKontakteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178B90423E0B79A0041D0BE /* VKontakteTests.swift */; };
 		C178B91023E0B79A0041D0BE /* VKontakteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178B90F23E0B79A0041D0BE /* VKontakteUITests.swift */; };
 		C178B91E23E0B8650041D0BE /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178B91D23E0B8650041D0BE /* LoginFormController.swift */; };
+		C1990CB223EED58400304CAE /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1990CB123EED58400304CAE /* FriendsController.swift */; };
+		C1990CB723EEE41A00304CAE /* AllGroopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1990CB623EEE41A00304CAE /* AllGroopController.swift */; };
+		C1990CB923EEE44F00304CAE /* AllGroopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1990CB823EEE44F00304CAE /* AllGroopCell.swift */; };
+		C1990CBC23EF061C00304CAE /* MyGroopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1990CBB23EF061C00304CAE /* MyGroopsController.swift */; };
+		C1990CBE23EF065900304CAE /* MyGroopsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1990CBD23EF065900304CAE /* MyGroopsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		C178B90F23E0B79A0041D0BE /* VKontakteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKontakteUITests.swift; sourceTree = "<group>"; };
 		C178B91123E0B79A0041D0BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C178B91D23E0B8650041D0BE /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		C1990CB123EED58400304CAE /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
+		C1990CB623EEE41A00304CAE /* AllGroopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroopController.swift; sourceTree = "<group>"; };
+		C1990CB823EEE44F00304CAE /* AllGroopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroopCell.swift; sourceTree = "<group>"; };
+		C1990CBB23EF061C00304CAE /* MyGroopsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroopsController.swift; sourceTree = "<group>"; };
+		C1990CBD23EF065900304CAE /* MyGroopsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroopsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +109,12 @@
 		C178B8EC23E0B7960041D0BE /* VKontakte */ = {
 			isa = PBXGroup;
 			children = (
+				C1990CBF23EF066800304CAE /* MyGroop */,
+				C1990CBA23EF056500304CAE /* AllGroup */,
 				C178B8ED23E0B7960041D0BE /* AppDelegate.swift */,
 				C178B8EF23E0B7960041D0BE /* SceneDelegate.swift */,
-				C178B91D23E0B8650041D0BE /* LoginFormController.swift */,
-				C178B8F323E0B7960041D0BE /* Main.storyboard */,
-				C178B8F623E0B7990041D0BE /* Assets.xcassets */,
-				C178B8F823E0B7990041D0BE /* LaunchScreen.storyboard */,
+				C1990CB523EEDA8400304CAE /* Controllers */,
+				C1990CB323EEDA0400304CAE /* Assets */,
 				C178B8FB23E0B7990041D0BE /* Info.plist */,
 			);
 			path = VKontakte;
@@ -126,6 +136,43 @@
 				C178B91123E0B79A0041D0BE /* Info.plist */,
 			);
 			path = VKontakteUITests;
+			sourceTree = "<group>";
+		};
+		C1990CB323EEDA0400304CAE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C178B8F323E0B7960041D0BE /* Main.storyboard */,
+				C178B8F623E0B7990041D0BE /* Assets.xcassets */,
+				C178B8F823E0B7990041D0BE /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		C1990CB523EEDA8400304CAE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C178B91D23E0B8650041D0BE /* LoginFormController.swift */,
+				C1990CB123EED58400304CAE /* FriendsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C1990CBA23EF056500304CAE /* AllGroup */ = {
+			isa = PBXGroup;
+			children = (
+				C1990CB623EEE41A00304CAE /* AllGroopController.swift */,
+				C1990CB823EEE44F00304CAE /* AllGroopCell.swift */,
+			);
+			path = AllGroup;
+			sourceTree = "<group>";
+		};
+		C1990CBF23EF066800304CAE /* MyGroop */ = {
+			isa = PBXGroup;
+			children = (
+				C1990CBD23EF065900304CAE /* MyGroopsCell.swift */,
+				C1990CBB23EF061C00304CAE /* MyGroopsController.swift */,
+			);
+			path = MyGroop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1990CB723EEE41A00304CAE /* AllGroopController.swift in Sources */,
+				C1990CBC23EF061C00304CAE /* MyGroopsController.swift in Sources */,
+				C1990CB923EEE44F00304CAE /* AllGroopCell.swift in Sources */,
 				C178B91E23E0B8650041D0BE /* LoginFormController.swift in Sources */,
+				C1990CB223EED58400304CAE /* FriendsController.swift in Sources */,
+				C1990CBE23EF065900304CAE /* MyGroopsCell.swift in Sources */,
 				C178B8EE23E0B7960041D0BE /* AppDelegate.swift in Sources */,
 				C178B8F023E0B7960041D0BE /* SceneDelegate.swift in Sources */,
 			);
